@@ -1,0 +1,1015 @@
+@import config
+
+
+.content
+  position: relative
+  width: 100%
+  height: 100%
+
+.hidden
+  display: none
+
+.body-fixed
+  overflow: hidden
+// text option's
+.title
+  color: #99EFD0
+  font:
+    size: 2.625rem
+    family: $titlefont
+    weight: 700
+  display: block
+  span
+    color: $block
+
+.subtitle
+  font:
+    size: 1rem
+    weight: 600
+    family: $userfont
+  color: $textcolor
+
+.text-zone
+  display: block
+  p,h1,h2,h3,h4,h5,h6
+    white-space: pre-line
+// ---------------------- HEADER ----------------------  \\
+.header
+  width: 100%
+  .content
+    position: relative
+    padding:
+      top: 4.9375rem
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+  &-left
+    display: flex
+    align-items: center
+    .logo
+      margin:
+        right: 2.75rem
+    ul
+      display: flex
+      li
+        margin:
+          left: .6875rem
+          right: .6875rem
+        &:first-child
+          margin:
+            left: 0
+        &:last-child
+          margin:
+            right: 0
+        a
+          font:
+            size: .75rem
+            family: $btnfont
+            weight: 600
+          color: #b5b5b5
+          text-transform: uppercase
+          transition: .5s ease-in-out
+          &:hover
+            color: #fff
+  &-right
+    .btn
+      max-width: 7rem
+      margin: 0 10px
+      width: 100%
+      padding: .5rem 0
+      &:first-child
+        margin-left: 0
+      &:last-child
+        margin-right: 0
+      
+// ---------------------- MAIN ----------------------  \\
+
+.banner
+  .content
+    max-width: 75rem
+    margin: 0 auto
+    padding:
+      top: 6.25rem
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    
+    .left
+      padding:
+        top: 35px
+    * > .text-zone
+      margin:
+        bottom: 2.5rem
+      .title
+        font:
+          size: 2.75rem
+        line-height: 1.2
+        margin:
+          bottom: 1.25rem
+      p
+        font:
+          size: 1.125rem
+          weight: 600
+          family: $userfont
+        line-height: 1.2
+    .buttons
+      justify-content: flex-start
+      margin:
+        bottom: 3.75rem
+    .btn
+      padding: .8125rem 0
+      margin: 0 .625rem
+      max-width: 9.8125rem
+      width: 100%
+    
+    .video
+      display: flex
+      .player
+        width: 8.75rem
+        position: relative
+        height: 5rem
+        background:
+          color: #361C5D
+        border-radius: 4px
+        display: block
+      #video
+        &-play 
+          position: absolute
+          top: 0
+          right: 0
+          bottom: 0
+          left: 0
+          margin: auto
+          width: 2.5rem
+          height: 2.5rem
+          border-radius: 50%
+          background:
+            color: #fff
+          z-index: 1
+          cursor: pointer
+          transition: .2s ease
+          transition-property: opacity, visibility
+          &::before
+            content: ''
+            display: block
+            position: absolute
+            top: 0
+            bottom: 0
+            margin: auto
+            left: 52%
+            width: 0
+            height: 0
+            transform: translateX(-50%)
+            border: .75rem solid transparent
+            border-top-width: .5rem
+            border-bottom-width: .5rem
+            border-left-color: #361C5D
+            border-right-width: 0
+            transition: transform .2s ease
+      .text-zone
+        margin:
+          left: 1.25rem
+          top: .3125rem
+        p
+          font:
+            size: 1rem
+          margin:
+            bottom: .3125rem
+        #open-video
+          color: #6D6D78
+          font:
+            size: 14px
+            family: $btnfont
+            weight: 400
+  
+// ----------------- SPONSOR ----------------- \\
+.sponsor
+  .rows
+    display: flex
+    align-items: center
+    justify-content: center
+    margin:
+      top: 1.25rem
+    .block-img
+      position: relative
+      margin: 0 2.3125rem
+      img
+        width: 100%
+        hegiht: auto
+        opacity: .35
+      &:nth-child(1)
+        flex: none
+        order: 0
+        flex-grow: 0
+        margin:
+          left: 6.125rem
+      &:nth-child(2)
+        flex: none
+        order: 1
+        flex-grow: 0
+      &:nth-child(3)
+        flex: none
+        order: 2
+        flex-grow: 0
+      &:nth-child(4)
+        flex: none
+        order: 3
+        flex-grow: 0
+      &:nth-child(5)
+        flex: none
+        order: 4
+        flex-grow: 0
+      &:nth-child(6)
+        flex: none
+        order: 5
+        flex-grow: 0
+        margin:
+          right: 6.125rem
+
+
+.yourchoice
+  &::before
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    background:
+      image: url('../img/bg_choice.png')
+      size: contain
+      repeat: no-repeat
+    transform: translateY(-8.125rem)
+    display: block
+    opacity: .15
+    z-index: -1
+  
+  .content
+    padding:
+      top: 6.25rem
+    max-width: 62.5rem
+    margin: 0 auto
+  .content-title
+    text-align: center
+    .title
+      margin:
+        bottom: .8125rem
+    
+  
+  .flexbox
+    position: relative
+    margin:
+      top: 3.125rem
+      left: -1.5625rem
+      right: -1.5625rem
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    .block
+      width: calc(100% / 3 - 3.125rem)
+      display: block
+      margin:
+        bottom: 2.1875rem
+        left: 1.5625rem 
+        right: 1.5625rem
+      &:nth-child(1)
+        .box::before
+          background:
+            image: url(../img/2e.svg)
+        flex: none
+        order: 0
+        flex-grow: 0
+      &:nth-child(2)
+        .box::before
+          background:
+            image: url(../img/airpods.svg)
+        flex: none
+        order: 1
+        flex-grow: 0
+      &:nth-child(3)
+        .box::before
+          background:
+            image: url(../img/live.svg)
+        flex: none
+        order: 2
+        flex-grow: 0
+      &:nth-child(4)
+        .box::before
+          background:
+            image: url(../img/og.svg)
+        flex: none
+        order: 3
+        flex-grow: 0
+      &:nth-child(5)
+        .box::before
+          background:
+            image: url(../img/er.svg)
+        flex: none
+        order: 4
+        flex-grow: 0
+      &:nth-child(6)
+        .box::before
+          background:
+            image: url(../img/cp.svg)
+        flex: none
+        order: 5
+        flex-grow: 0
+      .box
+        position: relative
+        display: flex
+        &::before
+          content: ''
+          position: relative
+          margin:
+            right: 1.75rem
+          min-width: 1.5rem
+          min-height: 1.5rem
+          width: auto
+          height: auto
+          display: block
+          background:
+            repeat: no-repeat
+            size: contain
+          
+      &-title
+        margin:
+          bottom: .625rem
+        font:
+          size: 1.125rem
+          weight: 700
+        color: $titlecolor
+      &-text-zone
+        font:
+          size: .875rem
+          weight: 600
+        line-height: 1.25
+        
+
+
+.trafic
+  &::before
+    content: ''
+    position: absolute
+    width: 27%
+    height: 16%
+    background:
+      image: url('../img/line0.png')
+      size: contain
+      repeat: no-repeat
+    left: 0
+    transform: translateY(67%)
+    display: block
+  .content
+    max-width: 62.5rem
+    margin: 0 auto
+    padding:
+      top: 9.375rem
+      bottom: 7.5rem
+    display: flex
+    align-items: center
+  .text-zone
+    width: 90%
+    .title
+      line-height: 1.25
+    p
+      margin:
+        top: 32px
+        bottom: 48px
+      font:
+        size: .9375rem
+        weight: 600
+        family: $userfont
+      line-height: 1.8
+  .images
+    position: relative
+    display: flex
+    justify-content: center
+  .block-img
+    border-radius: .625rem
+    overflow: hidden
+    img
+      width: auto
+      height: auto
+    &:nth-child(1)
+      position: absolute
+      left: 0
+      top: 1.25rem
+      z-index: 2
+    &:nth-child(2)
+      position: relative
+      z-index: 1
+    &:nth-child(3)
+      position: absolute
+      left: 27%
+      bottom: -3.125rem
+      z-index: 2
+      width: 5.5625rem
+      height: 5rem
+      border-radius: .625rem
+      background: #13C296
+      display: inline-flex
+      justify-content: center
+      align-items: center
+      box-shadow: -16.0895px 24.1342px 36.6483px rgba(19, 194, 150, 0.24)
+    &:nth-child(4)
+      position: absolute
+      right: 11%
+      bottom: -3.125rem
+      z-index: -1
+
+.savemoney
+  .content
+    max-width: 62.5rem
+    margin: 0 auto
+    padding:
+      top: calc( 12.25rem / 2 )
+      bottom: calc(10.5625rem / 2)
+    &-title
+      text-align: center
+      .title
+        white-space: pre-line
+        letter-spacing: .020625rem
+        line-height: 1.2
+        font:
+          size: 2.25rem
+      .subtitle
+        margin: 2rem auto 0
+        width: 50%
+        font:
+          size: .9375rem
+        letter-spacing: .0125rem
+        line-height: 1.2
+    .flexbox
+      margin: 3rem -3.40625rem 0
+      padding:
+        bottom: calc(10.5625rem / 2)
+      display: flex
+      flex-direction: row
+      justify-content: center
+      flex-wrap: wrap
+      .block
+        width: calc(100% / 3 - 6.8125rem)
+        margin: 0 3.40625rem
+        position: relative
+        display: block
+        .box
+          text-align: center
+          display: flex
+          justify-content: center
+          flex-direction: column
+        .num
+          font:
+            size: 2.25rem
+            weight: 700
+            family: $titlefont
+          color: $titlecolor
+          letter-spacing: .020625rem
+          line-height: 1.25
+          margin:
+            bottom: 1rem
+        .text-zone
+          font:
+            size: .9075rem 
+            weight: 600
+          line-height: 1.3
+          letter-spacing: .0125rem
+          white-space: pre-line
+
+.nextpjt
+  position: relative
+  &::before
+    content: ''
+    position: absolute
+    width: 90%
+    height: 80%
+    max-width: 100rem
+    margin: 0 auto
+    left: 50%
+    right: auto
+    top: auto
+    bottom: -35%
+    transform: translateX(-50%)
+    background:
+      image: url(../img/circle.png)
+      size: contain
+      repeat: no-repeat
+      position-x: center
+
+    display: block
+    z-index: -1
+  &::after
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    max-width: 100rem
+    margin: 0 auto
+    left: 51%
+    right: auto
+    top: auto
+    bottom: -25%
+    transform: translateX(-50%)
+    background:
+      image: url('../img/circleup.png')
+      size: contain
+      repeat: no-repeat
+      position-x: center
+    display: block
+    z-index: -1
+  .content
+    position: relative
+    max-width: 62.5rem
+    margin: 0 auto
+    padding:
+      top: calc( 6.8125rem / 2 )
+      bottom: calc(25.0625rem / 2)
+    text-align: center
+    .title
+      width: 80%
+      margin:
+        bottom: 2.875rem
+        left: auto
+        right: auto
+    .btn
+      max-width: 164px
+      padding:
+        top: 1.0625rem
+        bottom: 1.0625rem
+
+
+.business
+  position: relative
+  &::before
+    content: ''
+    position: absolute
+    width: 100%
+    height: 80%
+    right: 0
+    bottom: 0
+    background:
+      image: url('../img/world.png')
+      size: contain
+      repeat: no-repeat
+      position-x: right
+      position-y: center
+
+    display: block
+
+  .content
+    max-width: 62.5rem
+    width: 100%
+    margin: 0 auto
+    padding:
+      top: calc(25.0625rem / 2)
+      bottom: calc( 10.4375rem / 2 )
+    display: flex
+    flex-direction: row
+  .left
+    margin:
+      top: 3rem
+    .text-zone
+      width: 90%
+      .title
+        line-height: 1.3
+        margin:
+          bottom: 2rem
+      p
+        font:
+          size: .9375rem
+        line-height: 1.4
+        letter-spacing: .03125rem
+        margin:
+          bottom: 2.875rem
+  .right
+    display: block
+    position: relative
+  .up
+    position: absolute
+    left: -1.5625rem
+    top: 32%
+    z-index: 2
+    width: 3.75rem
+    height: 3.75rem
+    border-radius: .625rem
+    background: #13C296
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    box-shadow: -16.0895px 24.1342px 36.6483px rgba(19, 194, 150, 0.24)
+    img
+      width: 1.875rem
+  .sub
+    position: absolute
+    right: -6.8rem
+    top: 59%
+    width: 8.125rem
+    padding:
+      top: .9375rem
+      bottom: .9375rem
+    background: #516EA9
+    box-shadow: -0.5rem 1rem 3.75rem rgba(82, 114, 139, 0.24)
+    border-radius: .625rem
+    text-align: center
+    z-index: -1
+    .title
+      color: #fff
+      font:
+        size: 1rem
+        weight: 500
+        family: "Monserrat", sans-serif
+      line-height: 1.2
+      margin:
+        bottom: .1875rem
+    p
+      font:
+        size: .625rem
+        weight: 600
+        family: "Open Sans", sans-serif
+      line-height: 1
+      letter-spacing: .03125rem
+      color: #fff
+      opacity: .8
+      mix-blend-mode: normal
+  .card
+    position: relative
+    width: 100%
+    max-width: 16.25rem
+    margin: 0 auto
+    background: #fff
+    border-radius: 0 0 .625rem .625rem
+    .box
+      position: relative
+      width: 100%
+    &-header
+      width: 100%
+      height: auto
+    &-info
+      position: relative
+      padding:
+        top: 1.25rem
+        left: 1.875rem
+        right: 1.875rem
+        bottom: 1.375rem
+    &-title
+      margin:
+        bottom: 1.25rem
+      .title
+        font:
+          size: 1rem
+          weight: 500
+          family: "Monserrat", sans-serif
+        color: #212B36
+        line-height: 1
+      .subtitle
+        font:
+          size: .625rem
+          weight: 400
+          family: "Open Sans", sans-serif
+        letter-spacing: .03125rem
+    .price
+      padding:
+        bottom: 1.25rem
+      border-bottom: 1px solid #D6DBDF
+      .num
+        font:
+          size: 1.5rem
+          weight: 400
+        line-height: 1.5
+        color: #13c296
+      p
+        font:
+          size: .625rem
+          weight: 600
+          family: "Open Sans", sans-serif
+        color: #98a4af
+        line-height: 1.1
+        letter-spacing: .03125rem
+        text-transform: uppercase
+    .flexbox
+      position: inherit
+      display: flex
+      flex-direction: row
+      margin: .9375rem -1.5rem 0
+      justify-content: center
+      .block
+        width: calc(100% / 3 )
+        margin: 0 1.3125rem
+        .box
+          line-height: 0
+        .num
+          font:
+            size: .875rem
+            weight: 500
+            family: "Monserrat", sans-serif
+          color: #212b36
+          line-height: 1.1
+        p
+          font:
+            size: .625rem
+            weight: 400
+            family: 'Open Sans', sans-serif
+          line-height: 1
+          color: #637381
+          letter-spacing: .03125rem
+  
+
+.helpinfo
+  position: relative
+  &::before
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    background:
+      image: url('../img/line.png')
+      size: contain
+      repeat: no-repeat
+      position-x: right
+    display: block
+  .content
+    margin: 0 auto
+    padding:
+      top:  calc( 10.4375rem / 2 )
+      bottom: calc( 12.25rem / 2 )
+    max-width: 62.5rem
+    display: flex
+    .left
+      .block-img
+        position: relative
+      .figure
+        position: absolute
+        background:
+          size: contain
+          repeat: no-repeat
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        display: block
+        &-1
+          width: 8.25rem
+          height: 3.9375rem
+          top: -1.5625rem
+          left: -1.875rem
+          background:
+            image: url('../img/Group 8.svg')
+          z-index: -1
+        &-2
+          width: 8.25rem
+          height: 3.9375rem
+          top: 50%
+          right: 4.6875rem
+          left: auto
+          background:
+            image: url('../img/Group 8.svg')
+          z-index: -1
+        &-3
+          width: 6.875rem
+          height: 8.3125rem
+          top: auto
+          bottom: 4.375rem
+          left: -5rem
+          background:
+            image: url('../img/Group.svg')
+          z-index: -1
+    .right 
+      margin:
+        top: 3.75rem
+      > .text-zone
+        .title
+          font:
+            size: 1.625rem
+          margin:
+            bottom: 2rem
+        p
+          font:
+            size: .9375rem
+            weight: 600
+          letter-spacing: .0125rem
+    .double
+      display: flex
+      justify-content: space-between
+      margin:
+        top: 3rem
+
+      .block
+        max-width: 14rem
+        .icon
+          position: relative
+          width: 2.25rem
+          height: 2.25rem
+          margin:
+            bottom: 1rem
+          background:
+            size: contain
+            repeat: no-repeat
+          display: block
+        &:first-child
+          .icon
+            background:
+              image: url('../img/fo.svg')
+        &:last-child
+          .icon
+            background:
+              image: url('../img/live.svg')
+        .text-zone
+          .title
+            font:
+              size: .9375rem
+            margin:
+              bottom: 8px
+            line-height: 1.2
+          p
+            font:
+              size: .9375rem
+            letter-spacing: .0125rem
+          
+.regmail
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 50%
+    right: auto
+    bottom: auto
+    left: 0
+    transform: translateY(-50%)
+    background:
+      image: url('../img/bg_message.png')
+      size: contain
+      repeat: no-repeat
+      position: center
+
+    display: block
+    z-index: -1
+  .content
+    max-width: 62.5rem
+    margin: 0 auto
+    display: block
+    padding:
+      top: calc(10.5625rem / 2)
+      bottom: 8.6875rem
+    text-align: center
+    .block
+      position: relative
+      width: auto
+      background:
+        color:rgba(60, 62, 125, 0.19)
+      backdrop-filter: blur(134px)
+      padding: 3.125rem 9.375rem
+      > span
+        font:
+          size: .875rem
+          weight: 600
+          family: $userfont
+        color: #8476AA
+        letter-spacing: .0125rem
+      .text-zone
+        margin:
+          bottom: 1.4375rem
+        .title
+          font:
+            family: $btnfont
+            weight: 500
+            size: 2.25rem
+          color: $block
+          margin:
+            bottom: 1.25rem
+        p
+          font:
+            size: 1rem
+            family: $btnfont
+            weight: 500
+          line-height: 1.35
+          width: 55%
+          margin: 0 auto
+
+      .submit
+        margin:
+          bottom: 1rem
+        input
+          position: relative
+          width: 100%
+          max-width: 18rem
+          min-width: 10.9375rem
+          padding: 1.125rem 1rem
+          background:
+            color: rgba(246, 246, 246, .1)
+          border-radius: .3125rem
+          border: 0
+          color: #fff
+          &::placeholder
+            font:
+              size: .875rem
+              weight: 400
+              family: $titlefont
+            letter-spacing: .0125rem
+            color: #fff
+            opacity: .2
+        .btn
+          position: relative
+          width: 100%
+          max-width: 8rem
+          border-radius: 0 .3125rem .3125rem 0
+          padding: 
+            top: 1.1rem
+            right: 0
+            bottom: 1.1rem
+            left: 0
+          transform: translateX(-0.625rem) translateY(-0.0625rem)
+      
+
+.footer
+  .content
+    width: 100%
+    max-width: 62.5rem
+    margin: 0 auto
+    .top,.center,.bottom
+      display: flex
+      align-items: center
+    .top
+      justify-content: space-between
+      .logo
+        color: $block
+        font:
+          size: 1.625rem
+          weight: 700
+          family: $titlefont
+        letter-spacing: .020313rem
+      .social
+        display: flex
+        align-items: center
+        li
+          margin: 0 .5rem
+          width: 2.5rem
+          height: 2.5rem
+          background:
+            color: rgba(246, 246, 246,.1)
+          border-radius: 100%
+          display: flex
+          align-items: center
+          justify-content: center
+          a
+            color: #fff
+    .center
+      width: 100%
+      position: relative
+      margin:
+        top: 5.875rem
+        bottom: 7.5rem
+      nav
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: space-between
+        span
+          color: #fff
+          font:
+            size: 0.9rem
+            weight: 700
+          margin:
+            bottom: 1.56rem
+          line-height: 1.1
+        li
+          margin:
+            top: .5rem
+            bottom: .5rem
+          > a
+            color: #fff
+            font:
+              size: .9rem
+              weight: 400
+            line-height: 1.15
+            letter-spacing: .0125rem
+    .bottom
+      margin:
+        bottom: 6.25rem
+      justify-content: center
+      > *
+        font:
+          family: $titlefont
+          weight: 400
+          size: .875rem
+        line-height: 1.2
+        letter-spacing: .0125rem
+        color: #8D8D8D
+        margin: 0 1rem
+
+
+
+
+
+
+
+
+
+
+
+
+@import media
+
+
+
+

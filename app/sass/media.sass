@@ -1,0 +1,299 @@
+
+// media
+
+@media screen and (max-width: 85rem)
+  .banner .content * > .text-zone .title
+    font:
+      size: 2.4rem
+
+@media screen and (max-width: 75rem)
+  .menu-nav
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 3
+    &::before
+      content: ''
+      position: fixed
+      width: 30rem
+      height: 30rem
+      background: $block
+      display: block
+      border-radius: 0
+      right: -35rem
+      top: -35rem
+      border-radius: 100%
+      transition: all 1.5s ease-in-out 0s
+    &.active
+      z-index: 1000
+      &::before
+        width: 125rem
+        height: 125rem
+        top: 0
+        right: 0
+        border-radius: 0
+      ul
+        opacity: 1
+        transition: all .5s ease-in-out .75s
+    ul
+      position: fixed
+      top: 50%
+      left: 50%
+      transform: translate(-50%,-50%)
+      display: block
+      opacity: 0
+      transition: all .5s ease-in-out 0s 
+      li
+        margin: .3125rem 0
+        padding: .625rem
+        text-align: center
+        a
+          color: #fff
+          font:
+            size: 1.5rem
+          
+
+  .container
+    max-width: 62.5rem
+    margin: 0 auto!important
+    min-width: auto
+  .content
+    max-width: 100%!important
+  .title
+    font:
+      size: 2.25rem
+  .header-mobile .content
+    padding:
+      top: .625rem
+  .hamburger
+    position: relative
+    float: right
+    background: $block
+    padding: .9375rem .9375rem .625rem
+    border-radius: .625rem
+    z-index: 1001
+    &.is-active
+      background: #fff
+      .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+        background: $block
+  .hamburger-box
+    width: 1.875rem
+  .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+    background: #fff
+    width: 1.875rem
+    height: .3125rem
+@media screen and (max-width: 60rem)
+  .header
+    .left, .right 
+      width: 50%
+  .left,.right
+    width: 100%
+  .content
+    flex-wrap: wrap!important
+  .header .content
+    padding:
+      top: 1.875rem
+  .banner .content 
+    padding:
+      top: 3.125rem
+    .left
+      width: 100%
+    .right
+      position: absolute
+      width: 50%
+      top: 45%
+      right: 0
+      bottom: 0 
+      left: auto
+      transform: translateY(-50%)
+      img
+        width: 110%
+        opacity: .5
+  .sponsor .rows 
+    flex-wrap: wrap
+    .block-img
+      margin: .625rem 2.3125rem!important
+  .yourchoice .flexbox .block
+    width: calc(100% / 2 - 3.125rem)
+  .trafic .content
+    padding:
+      top: 5.375rem
+    .images
+      width: 85%
+      margin: 1.5625rem auto 0
+  .trafic .text-zone p
+    width: 70%
+    margin:
+      top: 1rem
+      bottom: 1rem
+  
+  .savemoney .content
+    padding:
+      top: calc( 12.25rem / 4 )
+      bottom: calc( 10.5625rem / 4 )
+  .savemoney .content .flexbox
+    margin:
+      bottom: 0
+    padding:
+      bottom: 0
+  .savemoney .content .flexbox .block
+    width: 50%
+    margin:
+      top: 1.875rem
+      bottom: 1.875rem
+  .savemoney .content-title
+    .title
+      font:
+        size: 2rem 
+    .subtitle
+      width: 70%
+  .business::before
+    width: 70%
+  .business .content
+    padding:
+      top: calc(25.0625rem / 4)
+    .left
+      width: 42.5%
+      .text-zone
+        width: 100%
+        .title
+          font:
+            size: 1.875rem
+    .right
+      width: 52.5%
+  .helpinfo .content .left .block-img
+    width: 50%
+    margin: 0 auto
+    .figure-2
+      right: -2.3125rem
+  .helpinfo .content .double
+    justify-content: space-around
+  
+  .regmail .content .block
+    padding: 3.125rem 1.375rem
+
+  
+@media  screen and ( max-width: 48rem )
+  .title
+    font:
+      size: 1.5rem
+  
+  .banner .content * > .text-zone .title
+    font:
+      size: 1.5rem
+  .banner .content .btn
+    padding: 0.4125rem 0
+  .banner .content .right
+    display: none
+  .sponsor .rows .block-img
+    margin: 0.625rem 1.5125rem !important
+  .yourchoice .content
+    padding:
+      bottom: 1.25rem
+      top: 4.25rem
+    .block
+      width: calc(100% - 6.125rem)
+      margin:
+        left: 3.5625rem
+  .trafic .content
+    padding:
+      top: 0.375rem
+  .trafic .text-zone p
+    width: 100%
+  .trafic .block-img:nth-child(1)
+    right: -1.875rem
+    left: auto
+  .trafic .block-img:nth-child(3)
+    left: -5%
+    bottom: 0.875rem
+  .savemoney .content-title .title
+    font:
+      size: 1.25rem
+  .savemoney .content .flexbox
+    margin:
+      top: 1rem
+      bottom: 1rem
+  .savemoney .content .flexbox .block
+    margin:
+      top: 0.875rem
+      bottom: 0.875rem
+  
+  .business .card
+    max-width: 14rem
+  .business .card-header
+    position: relative
+    img
+      width: 100%
+
+  .business .content
+    padding:
+      top:  0
+    flex-wrap: wrap-reverse!important
+    .left
+      width: 100%
+    .right
+      width: 80%
+  .business .content .left .text-zone .title
+    margin:
+      bottom: 1rem
+  .business .left .text-zone p
+    margin:
+      bottom: 1.875rem
+  .helpinfo .content .left .block-img
+    width: 85%
+    margin: 0 auto
+    > img
+      width: 90%
+  .helpinfo .content .double .block .text-zone p
+    font:
+      size: .75rem
+  .nextpjt .content .title
+    width: 90%
+  .regmail .content
+    padding:
+      top: calc(10.5625rem /8)
+      bottom: 5.6875rem
+  .regmail .content .block
+    padding: 3.125rem 0.5rem
+  .regmail .content .block .text-zone .title
+    font:
+      size: 1rem
+  .regmail .content .block .text-zone p
+    font:
+      size: .75rem
+    width: 80%
+  .regmail .content .block .submit input
+    width: 50%
+    padding:
+      top: .75rem
+      bottom: .75rem
+  .regmail .content .block .submit .btn
+    padding:
+      top: .74rem
+      bottom: .7rem 
+    font:
+      size: .9rem
+  .helpinfo .content .double .text-zone
+    width: 95%
+  .footer .content .center
+    margin:
+      bottom: 3.5rem
+    nav
+      flex-wrap: wrap
+      text-align: center
+      ul
+        width: calc(100% / 2)
+        margin:
+          bottom: 1.875rem
+  .footer .content .bottom 
+    margin:
+      bottom: 2.25rem
+    > *
+      font:
+        size: .7rem 
+      margin: 0 .5rem
+      
